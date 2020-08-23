@@ -8,4 +8,10 @@
   <body>
     <p>Hello, <span id="name"></span></p>
   </body>
+  <script>
+    var queryVariable = window.location.search.substring(1);
+    var name = queryVariable.slice(queryVariable.search("=")+1);
+    console.log(name)
+    document.getElementById('name').innerHTML = name;
+  </script>
 </html>
